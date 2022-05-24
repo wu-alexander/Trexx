@@ -66,3 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # devise and pundit
 gem 'devise'
 gem 'pundit'
+
+# faker
+gem 'faker'

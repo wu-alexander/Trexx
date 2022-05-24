@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Creating treks"
+
+10.times do
+  print "."
+  user = User.create!(
+    email: Faker::Internet.email,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    gender: %w[Male Female Other].sample,
+    age: rand(16..90),
+    password: Faker::Internet.password
+  )
+
+  2.times do
+    Trek.create!(
+      user: user,
+      start_location: Faker::Games::Pokemon.location,
+      difficulty: %w[Easy Moderate Hard Extreme].sample,
+      duration_days: rand(1..21),
+      description: Faker::Lorem.paragraph
+    )
+  end
+end
