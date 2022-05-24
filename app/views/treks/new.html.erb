@@ -4,10 +4,12 @@
       <h1>Create a new trek!</h1>
 
       <%= simple_form_for(@trek) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
         <%= f.input :start_location %>
         <%= f.input :difficulty, collection: [ "Easy", "Moderate", "Hard", "Extreme" ] %>
         <%= f.input :duration_days %>
-        <%= f.input :description %>
+        <%= f.input :price %>
         <%= f.submit class: "btn-primary" %>
       <% end %>
     </div>
