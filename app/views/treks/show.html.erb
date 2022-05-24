@@ -1,1 +1,19 @@
-<h1>Show</h1>
+<div class="banner" style="background-image: url('https://source.unsplash.com/random')">
+  <div class="container">
+    <h1>Details of a hike</h1>
+    <p>Description: <%= @trek.description %></p>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <p>Start location: <%= @trek.start_location %></p>
+      <p>Difficulty: <%= @trek.difficulty %></p>
+      <p>Duration days: <%= @trek.duration_days %></p>
+    </div>
+     <div>
+          <%= link_to "Go back to overview", treks_path, class: 'btn btn-primary' %>
+        </div>
+  </div>
+</div>
