@@ -1,0 +1,15 @@
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <h1>Edit your trek!</h1>
+
+      <%= simple_form_for(@trek) do |f| %>
+        <%= f.input :start_location %>
+        <%= f.input :difficulty, collection: [ "Easy", "Moderate", "Hard", "Extreme" ] %>
+        <%= f.input :duration_days %>
+        <%= f.input :description %>
+        <%= f.submit class: "btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
