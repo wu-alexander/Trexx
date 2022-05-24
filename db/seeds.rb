@@ -22,6 +22,8 @@ puts "Creating treks"
   2.times do
     Trek.create!(
       user: user,
+      name: Faker::Name.name,
+      price: Faker::Types.rb_integer,
       start_location: Faker::Games::Pokemon.location,
       difficulty: %w[Easy Moderate Hard Extreme].sample,
       duration_days: rand(1..21),
