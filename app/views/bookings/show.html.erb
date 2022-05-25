@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: url('https://source.unsplash.com/random')">
+<div class="banner" style="background-image: url('https://source.unsplash.com/random/featured/?nature')">
   <div class="container">
     <h1>Your booking has been confirmed!</h1>
   </div>
@@ -11,7 +11,7 @@
       <p>Number of People: <%= @booking.num_trekkers %></p>
     </div>
      <div>
-          <%= link_to "Go back to overview", treks_path%>
+          <%= link_to "Go to my dashboard", dashboard_path, class: "btn btn-dark" %>
         </div>
   </div>
 </div>

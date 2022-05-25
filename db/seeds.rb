@@ -7,6 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Creating treks"
+User.create!(
+  email: "user@user.com",
+  password: "123456",
+  first_name: "Alex",
+  last_name: "Wu",
+  gender: "Male",
+  age: 23
+)
 
 10.times do |n|
   print "."
