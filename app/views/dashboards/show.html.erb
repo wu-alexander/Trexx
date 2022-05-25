@@ -1,1 +1,22 @@
-Dashboard Test
+<h1>My bookings</h1>
+<br><br>
+<h2>As a trekker...</h2>
+<div class="row">
+  <% @dashboard.client_bookings.each do |booking| %>
+    <%= link_to booking.trek.start_location, booking_path(booking) %>
+  <% end %>
+</div>
+<br><br>
+<h2>As a host...</h2>
+<div class="row">
+  <% @dashboard.host_bookings.each do |booking| %>
+    <%= link_to booking.trek.start_location, booking_path(booking) %>
+  <% end %>
+</div>
+<br><br>
+<h1>My listings</h1>
+<div class="row">
+  <% @dashboard.host_treks.each do |trek| %>
+    <%= link_to trek.start_location, trek_path(trek) %>
+  <% end %>
+</div>
