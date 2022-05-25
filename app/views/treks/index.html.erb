@@ -1,28 +1,20 @@
 <div class= "container">
   <div class="row">
-    <h1>Index</h1>
+    <% @treks.each do |trek| %>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary"><%= trek.start_location %></strong>
+            <h3 class="mb-0"><%= trek.name %></h3>
+            <div class="mb-1 text-muted">$<%= trek.price %></div>
+            <p class="card-text mb-auto"><%= trek.description %></p>
 
-
-<table>
-  <thead>
-  </thead>
-
-<tbody>
-  <% @treks.each do |trek| %>
-    <tr>
-      <td><%= trek.name %></td>
-      <td><%= trek.description %></td>
-       <td><%= trek.price %></td>
-       <td><%= trek.start_location %></td>
-       <td><%= link_to "Details", trek %></td>
-    </tr>
-  <% end %>
-
-  </tbody>
-</table>
-
-
-
-
+            <%= link_to "Details", trek, class: "stretched-link" %>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="https://source.unsplash.com/random/200x250/?nature,<%= rand(1..99) %>" alt="">
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
