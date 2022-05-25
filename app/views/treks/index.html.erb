@@ -1,1 +1,28 @@
-<h1>Index</h1>
+<div class= "container">
+  <div class="row">
+    <h1>Index</h1>
+
+
+<table>
+  <thead>
+  </thead>
+
+<tbody>
+  <% @treks.each do |trek| %>
+    <tr>
+      <td><%= trek.name %></td>
+      <td><%= trek.description %></td>
+       <td><%= trek.price %></td>
+       <td><%= trek.start_location %></td>
+       <td><%= link_to "Details", trek %></td>
+    </tr>
+  <% end %>
+
+  </tbody>
+</table>
+
+
+
+
+  </div>
+</div>
