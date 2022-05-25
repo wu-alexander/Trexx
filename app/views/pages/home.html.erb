@@ -6,8 +6,6 @@
 <p>Find the hike most suitable for you!</p>
 
 <br>
-<br>
-<br>
 
 <div class="container">
 <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
@@ -25,7 +23,6 @@
       <div class="container">
         <h2 class="text-center">Most popular Hikes in your area</h2>
         <div class="cards">
-
           <div class="card">
             <img src="https://source.unsplash.com/random" alt="">
             <h4>National Park</h4>
@@ -45,6 +42,7 @@
           </div>
 
         </div>
+        <%= link_to "Explore all treks", treks_path, class: 'btn btn-light' %>
       </div>
 
 </div>
