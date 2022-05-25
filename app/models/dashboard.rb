@@ -3,7 +3,7 @@ class Dashboard
     @user = user
   end
 
-  def customer_bookings
+  def client_bookings
     @user.bookings
   end
 
