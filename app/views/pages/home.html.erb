@@ -22,14 +22,16 @@
   <div class="cards">
     <% @nearby_treks.each do |trek| %>
       <div class="card">
-        <img src="https://source.unsplash.com/random/featured/?nature" alt="">
+        <img src="https://source.unsplash.com/random/200x250/?nature,<%= rand(1..99) %>" alt="">
+        <br>
         <h4><%= trek.name %></h4>
         <p><%= trek.description %></p>
         <p><%= trek.price %> $</p>
+        <%= link_to "Details", trek %>
       </div>
     <% end %>
   </div>
-  <%= link_to "Explore all treks", treks_path, class: 'btn btn-light' %>
+  <%= link_to "Explore all treks", treks_path, class: 'btn btn-dark' %>
   <br>
   <br>
   <br>
