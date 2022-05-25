@@ -14,7 +14,10 @@
       <p>Price: <%= @trek.price %></p>
     </div>
      <div>
-          <%= link_to "Go back to overview", treks_path, class: 'btn btn-primary' %>
+          <%= link_to "Book now", new_trek_booking_path(@trek), class: 'btn btn-primary' %>
+          <div>
+          <%= link_to "Go back to overview", treks_path%>
+          </div>
         </div>
   </div>
 </div>
