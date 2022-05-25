@@ -6,9 +6,4 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:show]
   resource :dashboard, only: [:show]
-
-  namespace :user do
-    resources :treks, only: :index
-    resources :bookings, only: :index
-  end
 end
