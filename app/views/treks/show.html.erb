@@ -22,7 +22,10 @@
     </div>
     <br><br>
     <div>
-      <%= link_to "Go back to overview", treks_path%>
+      <%= link_to "Delete trek", trek_path(@trek), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-primary' if @trek.user == current_user %>
+    </div>
+    <div>
+      <%= link_to "Go back to overview", treks_path %>
     </div>
   </div>
 </div>
