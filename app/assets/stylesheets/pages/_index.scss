@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
+
+//i donnt think you need to import home here
 @import "home";
+
+@import "components/_alert";
+@import "components/_avatar";
+@import "components/_form_legend_clear";
+@import "components/_navbar";
+@import "components/_footer";
+@import "components/_home-banner";
+@import "components/_cards";
+@import "components/_search-form-control";
+@import "components/_banner-show";
