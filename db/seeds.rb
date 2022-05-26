@@ -34,7 +34,7 @@ User.create!(
       price: Faker::Types.rb_integer,
       start_location: Faker::Games::Pokemon.location,
       difficulty: %w[Easy Moderate Hard Extreme].sample,
-      duration_days: rand(1..21),
+      duration_days: rand(1..7),
       description: Faker::Lorem.paragraph
     )
   end
