@@ -7,12 +7,12 @@
 }
 
 .title {
-  color: white;
+  color: #F3EEE9;
+
 }
 
 .h1 {
   margin: 0;
-  border: 1px solid red;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 70px;
@@ -21,11 +21,117 @@
 }
 
 
-.h2 {
+.h2.text-center {
   margin: 0;
-  color: rgb(113, 34, 34);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #3C3F22;
   font-size: 50px;
   font-weight: bold;
   padding-bottom: 40px;
+}
+
+.cards {
+  background-color: #F3EEE9;
+  /* border-radius: 20px; */
+
+}
+
+.cards > .card {
+  background-color: #F3EEE9;
+  box-shadow: none;
+  border: none;
+  /* border-radius: 20px; */
+  color: #3C3F22;
+}
+
+.card > img {
+  /* border-top-left-radius: 20px; */
+  /* border-top-right-radius: 20px; */
+}
+
+
+body{
+  background: #F3EEE9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #8C664D;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #8C664D;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #8C664D;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+a {
+  color: #B3B0AB;
+}
+
+a:hover {
+  color: #3C3F22;
+}
+
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+@media (min-width: 1200px) {
+  h4, .h4 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      letter-spacing: 2px;
+  }
+}
+
+
+.btn-dark {
+  color: #fff;
+  background-color: #8C664D;
+  border-color: #212529;
+  font-family: sans-serif;
+  opacity: 90;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-family: "dm Sans", sans-serif;
 }
