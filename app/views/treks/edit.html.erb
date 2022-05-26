@@ -4,10 +4,13 @@
       <h1>Edit your trek!</h1>
 
       <%= simple_form_for(@trek) do |f| %>
-        <%= f.input :start_location %>
-        <%= f.input :difficulty, collection: [ "Easy", "Moderate", "Hard", "Extreme" ] %>
-        <%= f.input :duration_days %>
-        <%= f.input :description %>
+        <%= f.input :name, :label => "Trek name", placeholder: 'e.g. "10-Day Andes Mountains Trek"' %>
+        <%= f.input :photo, as: :file, :label => "Upload photo" %>
+        <%= f.input :description, :label => "Description", placeholder: 'What makes your hiking trail unique? (max. 100 characters)' %>
+        <%= f.input :start_location, :label => "Location", placeholder: 'e.g. "Andes Mountains"' %>
+        <%= f.input :difficulty, :label => "", collection: [ "Easy", "Moderate", "Hard", "Extreme" ], prompt: 'Select difficulty' %>
+        <%= f.input :duration_days, :label => "", placeholder: 'Number of days', as: :integer, input_html: { min: '0', max: '14' }  %>
+        <%= f.input :price, :label => "", placeholder: 'Trip price (USD)', as: :integer, input_html: { min: '0' } %>
         <%= f.submit class: "btn-primary" %>
       <% end %>
     </div>
