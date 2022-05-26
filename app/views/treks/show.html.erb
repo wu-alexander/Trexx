@@ -13,11 +13,16 @@
       <p>Duration days: <%= @trek.duration_days %></p>
       <p>Price: <%= @trek.price %> $</p>
     </div>
-     <div>
-          <%= link_to "Book now", new_trek_booking_path(@trek), class: 'btn btn-primary' %>
-          <div>
-          <%= link_to "Go back to overview", treks_path%>
-          </div>
-        </div>
+    <div>
+      <%= link_to "Book now", new_trek_booking_path(@trek), class: 'btn btn-primary' unless @trek.user == current_user %>
+    </div>
+    <br><br>
+    <div>
+      <%= link_to "Edit trek", edit_trek_path(@trek), class: 'btn btn-primary' if @trek.user == current_user %>
+    </div>
+    <br><br>
+    <div>
+      <%= link_to "Go back to overview", treks_path%>
+    </div>
   </div>
 </div>
