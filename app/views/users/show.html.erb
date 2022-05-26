@@ -4,7 +4,8 @@
 <br><br>
 <div>
   <p><b>My profile:</b></p>
-  <div class="user-name-email">
+  <div class="user-info">
+    <p><%= cl_image_tag @user.photo.key, height: 200, width: 300, crop: :fill %></p>
     <p>First name: <%= @user.first_name %></p>
     <p>Last name: <%= @user.last_name %></p>
     <p>E-Mail: <%= @user.email %></p>
