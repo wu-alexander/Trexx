@@ -69,3 +69,6 @@ gem 'pundit'
 
 # faker
 gem 'faker'
+
+# cloudinary
+gem 'cloudinary', '~> 1.16.0'
