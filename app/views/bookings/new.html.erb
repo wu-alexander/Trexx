@@ -1,14 +1,16 @@
-<div class="container pt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-6">
-      <h1>Book this trek!</h1>
-      <h2><%= @trek.name %></h2>
-
-      <%= simple_form_for [ @trek, @booking ] do |f| %>
-        <%= f.input :start_on, html5: true, label: "Start date" %>
-        <%= f.input :num_trekkers, label: "Number of people" %>
-        <%= f.submit class: "btn-primary" %>
-      <% end %>
+<div class="home-banner">
+  <div class="container pt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+      <p><b>Mountain:</b> <%= @trek.name %> / <b>Duration:</b> <%= @trek.duration_days %> / <b>Price:</b> <%= @trek.price %>$</p>
+        <br>
+        <h1>Book this trek!</h1>
+        <%= simple_form_for [ @trek, @booking ] do |f| %>
+          <%= f.input :start_on, html5: true, label: "On what date do you want to start?" %>
+          <%= f.input :num_trekkers, label: "Total number of persons", as: :integer, input_html: { min: '0' } %>
+          <%= f.submit class: "btn-primary" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

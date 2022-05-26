@@ -7,7 +7,7 @@
       <p>As a hiking specialist, you can record your guided route here.</p>
 
       <%= simple_form_for(@trek) do |f| %>
-        <%= f.input :name, :label => "Mountain name" %>
+        <%= f.input :name, :label => "Trek name" %>
         <%= f.input :description, :label => "Route description", placeholder: 'What makes your hiking trail unique? (max. 100 characters)' %>
         <%= f.input :start_location %>
         <%= f.input :difficulty, :label => "Difficulty of the trek", collection: [ "Easy", "Moderate", "Hard", "Extreme" ] %>
