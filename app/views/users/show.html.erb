@@ -1,0 +1,13 @@
+<div>
+  <%= link_to "Update profile", edit_user_path(current_user), class: 'btn btn-primary' if @user == current_user %>
+</div>
+<br><br>
+<div>
+  <p><b>My profile:</b></p>
+  <div class="user-name-email">
+    <p>First name: <%= @user.first_name %></p>
+    <p>Last name: <%= @user.last_name %></p>
+    <p>E-Mail: <%= @user.email %></p>
+    <p>Gender: <%= @user.gender %></p>
+    <p>Age: <%= @user.age %></p>
+</div>
