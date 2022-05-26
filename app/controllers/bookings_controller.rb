@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @trek = Trek.find(params[:trek_id])
     @booking = Booking.new(booking_params)
     @booking.trek = Trek.find(params[:trek_id])
     @booking.user = current_user
