@@ -1,14 +1,18 @@
 <div class="home-banner">
   <div class="container">
-    <h1 id="home-header">Your next great adventure is waiting.</h1>
-    <div class="wrap">
+      <h1 class="home-banner-text">
+        Your next great adventure is waiting.<br>
+        <%= link_to "Let's go!", treks_path, id: "home-banner-text-link" %>
+      </h1>
+
+    <%# <div class="wrap">
       <div class="search">
-          <input type="text" class="searchTerm" placeholder="Discover Trecks!">
+          <input type="text" class="searchTerm" placeholder="Discover Treks!">
           <button type="submit" class="searchButton">
             <i class="fa fa-search"></i>
           </button>
       </div>
-    </div>
+    </div> %>
   </div>
 </div>
 <br>
