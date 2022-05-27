@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.home-banner-text {
+  padding: 240px 0 0 0;
+  text-shadow: 1px 1px #b7dcee;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+}
+
+#home-banner-text-link {
+  color: #1190cb;
+}
+
+#home-banner-text-link:hover {
+  color: white;
+}
