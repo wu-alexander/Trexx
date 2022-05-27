@@ -1,0 +1,16 @@
+<div class="text-center" style="background: rgba(255,255,255,0.5)">
+  <div class="card-body">
+    <h1 class="mb-0"><%= @trek.name %></h1>
+    <p class="m-0"><%= @trek.description %></p>
+    <h3 class="card-title">Trek infos</h3>
+    <h6 class="card-subtitle mb-2 text-muted">Price: <%= trek.price %> $</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Difficulty: <%= trek.difficulty %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Start location: <%= trek.start_location %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Number of days: <%= trek.duration_days %></h6>
+    <div class="row d-inline">
+    <%= link_to "Book now", new_trek_booking_path(trek), class: 'btn btn-primary' unless trek.user == current_user %>
+    <%= link_to "Edit trek", edit_trek_path(trek), class: 'card-link' if trek.user == current_user %>
+    <%= link_to "Delete trek", trek_path(trek), method: :delete, class: 'card-link', data: { confirm: "Are you sure?" } if trek.user == current_user %>
+    </div>
+  </div>
+</div>
