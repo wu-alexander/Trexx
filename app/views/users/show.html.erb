@@ -1,10 +1,14 @@
+<br>
 <div class="container">
-    <%= link_to "Update profile", edit_user_path(current_user), class: 'btn btn-primary' if @user == current_user %>
+    <%= link_to "Edit profile", edit_user_path(current_user), class: 'btn btn-primary' if @user == current_user %>
   <br><br>
   <div>
     <p><b>My profile:</b></p>
     <div class="user-info">
-      <%= cl_image_tag @user.photo.key, height: 200, width: 300, crop: :fill %><br><br>
+      <% if @user.photo.key %>
+        <%= cl_image_tag @user.photo.key, height: 200, width: 300, crop: :fill %>
+      <% end %>
+      <br><br>
       <%= simple_form_for(@user) do |f| %>
         <fieldset disabled>
         <%= f.input :email %>

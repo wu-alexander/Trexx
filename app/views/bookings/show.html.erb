@@ -1,18 +1,18 @@
 <div class="home-banner">
-  <div class="container h-100">
-    <div class="row align-items-center h-100">
-      <div class="col-4 mx-auto">
-        <div class="card h-100 border-primary justify-content-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-8 mx-auto pt-5">
+        <div class="bg-white border-primary justify-content-center">
           <div class="card-header">
           <br>
           <h2>Booking confirmed!</h2>
           </div>
           <br>
           <div class="card-body">
-            <h5 class="card-title">Trek: <%= @booking.trek.name %></h5>
-            <h5 class="card-title">Location: <%= @booking.trek.start_location %></h5>
-            <h5 class="card-title">Start date: <%= @booking.start_on %></h5>
-            <h5 class="card-text">Number of people: <%= @booking.num_trekkers %></h5>
+            <h5 class="card-title"><%= @booking.trek.name %></h5>
+            <p class="card-text">Beginning on <%= @booking.start_on %></p>
+            <p class="card-text">Party of <%= @booking.num_trekkers %></p>
+            <p class="card-text">$<%= @booking.trek.price %></p>
             <%= link_to "Go to my dashboard", dashboard_path, class: "btn btn-dark" %>
             </div>
           </div>
