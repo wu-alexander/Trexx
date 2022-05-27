@@ -20,13 +20,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -40,7 +40,7 @@
         </div>
         <br>
         <h4><%= trek.name %></h4>
-        <p>$<%= trek.price %></p>
+        <p><%= trek.start_location %></p>
         <%= link_to "Details", trek %>
       </div>
     <% end %>
