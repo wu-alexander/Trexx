@@ -1,17 +1,20 @@
-<div class="banner" style="background-image: url('https://source.unsplash.com/random/featured/?nature')">
-  <div class="container">
-    <h1>Your booking has been confirmed!</h1>
-  </div>
-</div>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-6 col-md-4">
-      <p>Date: <%= @booking.start_on %></p>
-      <p>Number of People: <%= @booking.num_trekkers %></p>
+<div class="home-banner">
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col-4 mx-auto">
+        <div class="card h-100 border-primary justify-content-center">
+          <div class="card-header">
+          <br>
+          <h5>Booking confirmed!</h5>
+          </div>
+          <br>
+          <div class="card-body">
+            <h5 class="card-title">Date: <%= @booking.start_on %></h5>
+            <p class="card-text">Number of People: <%= @booking.num_trekkers %></p>
+            <%= link_to "Go to my dashboard", dashboard_path, class: "btn btn-dark" %>
+            </div>
+          </div>
+      </div>
     </div>
-     <div>
-          <%= link_to "Go to my dashboard", dashboard_path, class: "btn btn-dark" %>
-        </div>
   </div>
 </div>
