@@ -1,14 +1,19 @@
-<div>
-  <%= link_to "Update profile", edit_user_path(current_user), class: 'btn btn-primary' if @user == current_user %>
-</div>
-<br><br>
-<div>
-  <p><b>My profile:</b></p>
-  <div class="user-info">
-    <p><%= cl_image_tag @user.photo.key, height: 200, width: 300, crop: :fill %></p>
-    <p>First name: <%= @user.first_name %></p>
-    <p>Last name: <%= @user.last_name %></p>
-    <p>E-Mail: <%= @user.email %></p>
-    <p>Gender: <%= @user.gender %></p>
-    <p>Age: <%= @user.age %></p>
+<div class="container">
+    <%= link_to "Update profile", edit_user_path(current_user), class: 'btn btn-primary' if @user == current_user %>
+  <br><br>
+  <div>
+    <p><b>My profile:</b></p>
+    <div class="user-info">
+      <%= cl_image_tag @user.photo.key, height: 200, width: 300, crop: :fill %><br><br>
+      <%= simple_form_for(@user) do |f| %>
+        <fieldset disabled>
+        <%= f.input :email %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :age %>
+        <%= f.input :gender, collection: [ "Male", "Female", "Non-binary", "I prefer not to say" ] %>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
 </div>
