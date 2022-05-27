@@ -49,6 +49,6 @@ class TreksController < ApplicationController
   end
 
   def trek_params
-    params.require(:trek).permit(:start_location, :difficulty, :duration_days, :description, :name, :price)
+    params.require(:trek).permit(:start_location, :difficulty, :duration_days, :description, :name, :price, :photo)
   end
 end

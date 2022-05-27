@@ -8,12 +8,14 @@
             <strong class="d-inline-block mb-2 text-primary"><%= trek.start_location %></strong>
             <h3 class="mb-0 "><%= trek.name %></h3>
             <div class="mb-1 fw-light">$<%= trek.price %> per person</div>
-            <p class="card-text mb-auto"><%= trek.description.truncate(90) %></p>
+            <p class="card-text mb-auto"><%= trek.description.truncate(40) %></p>
 
             <%= link_to "Details", trek, class: "stretched-link" %>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <%= cl_image_tag trek.photo.key, crop: :fill, width: 200, height: 250 %>
+            <% if trek.photo.attached? %>
+              <%= cl_image_tag trek.photo.key, crop: :fill, width: 200, height: 250 %>
+            <% end %>
           </div>
         </div>
       </div>
