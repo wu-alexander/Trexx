@@ -23,12 +23,12 @@ User.create!(
     password: "123456",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    gender: %w[Male Female Other].sample,
+    gender: %w[Male Female].sample,
     age: rand(16..90)
   )
 
   2.times do
-    Trek.create!(
+    trek = Trek.create!(
       user: user,
       name: Faker::Mountain.name,
       price: Faker::Types.rb_integer,
