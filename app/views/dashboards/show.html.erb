@@ -1,22 +1,59 @@
+<div class= "container">
+<br>
 <h1>My bookings</h1>
-<br><br>
+<br>
 <h2>As a trekker...</h2>
-<div class="row">
-  <% @dashboard.client_bookings.each do |booking| %>
-    <%= link_to booking.trek.start_location, booking_path(booking) %>
-  <% end %>
-</div>
-<br><br>
+  <div class="row">
+    <% @dashboard.client_bookings.each do |booking| %>
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+            <img src="https://source.unsplash.com/random/100x160/?nature,<%= rand(1..99) %>" alt="">
+          </div>
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0"><%= booking.trek.name %></h3>
+            <div class="mb-1 text-muted">Booking date: <%= booking.start_on %></div>
+            <div class="mb-1 text-muted">Start at: <%= booking.trek.start_location %></div>
+            <%= link_to "See details", booking_path(booking) %>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
 <h2>As a host...</h2>
-<div class="row">
-  <% @dashboard.host_bookings.each do |booking| %>
-    <%= link_to booking.trek.start_location, booking_path(booking) %>
-  <% end %>
-</div>
-<br><br>
-<h1>My listings</h1>
-<div class="row">
-  <% @dashboard.host_treks.each do |trek| %>
-    <%= link_to trek.start_location, trek_path(trek) %>
-  <% end %>
-</div>
+  <div class="row">
+    <% @dashboard.host_bookings.each do |booking| %>
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+            <img src="https://source.unsplash.com/random/100x160/?nature,<%= rand(1..99) %>" alt="">
+          </div>
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0"><%= booking.trek.name %></h3>
+            <div class="mb-1 text-muted">Number of People: <%= booking.num_trekkers %></div>
+            <div class="mb-1 text-muted">Date: <%= booking.start_on %></div>
+            <%= link_to "See details", booking_path(booking) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <h2>My listed treks</h2>
+  <div class="row">
+    <% @dashboard.host_treks.each do |trek| %>
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+            <img src="https://source.unsplash.com/random/100x160/?nature,<%= rand(1..99) %>" alt="">
+          </div>
+          <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0"><%= trek.name %></h3>
+            <div class="mb-1 text-muted">Duration days: <%= trek.duration_days %></div>
+            <div class="mb-1 text-muted">Price: $<%= trek.price %></div>
+            <%= link_to "See details", trek_path(trek) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
