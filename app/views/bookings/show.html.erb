@@ -5,12 +5,14 @@
         <div class="card h-100 border-primary justify-content-center">
           <div class="card-header">
           <br>
-          <h5>Booking confirmed!</h5>
+          <h2>Booking confirmed!</h2>
           </div>
           <br>
           <div class="card-body">
-            <h5 class="card-title">Date: <%= @booking.start_on %></h5>
-            <p class="card-text">Number of People: <%= @booking.num_trekkers %></p>
+            <h5 class="card-title">Trek: <%= @booking.trek.name %></h5>
+            <h5 class="card-title">Location: <%= @booking.trek.start_location %></h5>
+            <h5 class="card-title">Start date: <%= @booking.start_on %></h5>
+            <h5 class="card-text">Number of people: <%= @booking.num_trekkers %></h5>
             <%= link_to "Go to my dashboard", dashboard_path, class: "btn btn-dark" %>
             </div>
           </div>
