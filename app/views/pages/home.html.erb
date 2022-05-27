@@ -1,50 +1,36 @@
 <div class="home-banner">
   <div class="container">
-    <h2 class="title">Your next great adventure is waiting.</h2>
+      <h1 class="home-banner-text">
+        Your next great adventure is waiting.<br>
+        <%= link_to "Explore now.", treks_path, id: "home-banner-text-link" %>
+      </h1>
 
-    <div class="wrap">
+    <%# <div class="wrap">
       <div class="search">
-          <input type="text" class="searchTerm" placeholder="Discover Trecks!">
+          <input type="text" class="searchTerm" placeholder="Discover Treks!">
           <button type="submit" class="searchButton">
             <i class="fa fa-search"></i>
           </button>
       </div>
-    </div>
-
-
-
-  </div>
-
-
-
-  <div class="wrap">
-     <div class="search">
-        <input type="text" class="searchTerm" placeholder="Discover Trecks!">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
-     </div>
+    </div> %>
   </div>
 </div>
-
-
-
 <br>
-<div class="container">
-  <h2 class="text-center">Most popular Hikes in your area</h2>
+<div class="container" id="cards-slider">
+  <h2 class="text-center">Welcome to Trexx.<br>Here are a few adventures near you.</h2>
   <div class="cards">
     <% @nearby_treks.each do |trek| %>
       <div class="card">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain-peak, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain-peak, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://source.unsplash.com/random/200x250/?nature, <%= rand(1..99) %>" class="d-block w-100" alt="...">
+              <img src="https://source.unsplash.com/random/?mountain-peak, <%= rand(1..99) %>" class="d-block w-80" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -56,19 +42,12 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
-
-
-
         <br>
         <h4><%= trek.name %></h4>
-        <p>$<%= trek.price %></p>
+        <p><%= trek.start_location %></p>
         <%= link_to "Details", trek %>
       </div>
     <% end %>
   </div>
-
-  <%= link_to "Explore", treks_path, class: 'btn btn-dark' %>
-  <br>
-  <br>
-  <br>
+  <%= link_to "Explore More", treks_path, class: 'btn btn-dark' %>
+</div>

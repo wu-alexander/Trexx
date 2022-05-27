@@ -1,5 +1,5 @@
 .home-banner {
-  background-image: asset-url('background-field.jpg');
+  background-image: asset-url('hike-default.jpg');
   background-size: cover;
   height: 110vh;
   width: auto;
@@ -13,7 +13,6 @@
   padding-top: 100px;
   font-weight: 400;
   letter-spacing: 2px;
-
 }
 
 .h1 {
@@ -43,11 +42,12 @@
 
 .cards {
   background-color: #F3EEE9;
+  margin: 24px;
   /* border-radius: 20px; */
 }
 
 .cards > .card {
-  background-color: #F3EEE9;
+  background-color: white;
   box-shadow: none;
   border: none;
   /* border-radius: 20px; */
@@ -142,11 +142,10 @@ p {
   color: #fff;
   background-color: #8C664D;
   border-color: #212529;
-  font-family: sans-serif;
   opacity: 90;
   text-align: center;
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 2px;
-  font-family: "dm Sans", sans-serif;
+  margin: 16px;
 }
