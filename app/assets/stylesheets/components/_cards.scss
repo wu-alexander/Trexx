@@ -5,22 +5,31 @@
   border-radius: 12px;
 }
 
-.card p {
-  opacity: .5;
-}
+//.card p {
+//  opacity: .5;
+//}
 
 .card {
   width: 320px;
-  border-radius: 12px;
+  border-radius: 0px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
   border: 1px solid rgb(230,230,230);
   padding: 20px;
   margin: 8px;
+
 }
 
 .cards {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px;
+}
+
+.bg-white-semi-transparent {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.h3 {
+  font-weight: 500px;
 }

@@ -8,7 +8,7 @@
 
 puts "Creating treks"
 User.create!(
-  email: "user@user.com",
+  email: "  ",
   password: "123456",
   first_name: "Alex",
   last_name: "Wu",
