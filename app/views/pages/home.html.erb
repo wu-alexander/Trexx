@@ -1,7 +1,6 @@
 <div class="home-banner">
   <div class="container">
-    <h2 class="title">Your next great adventure is waiting.</h2>
-
+    <h1 id="home-header">Your next great adventure is waiting.</h1>
     <div class="wrap">
       <div class="search">
           <input type="text" class="searchTerm" placeholder="Discover Trecks!">
@@ -10,28 +9,11 @@
           </button>
       </div>
     </div>
-
-
-
-  </div>
-
-
-
-  <div class="wrap">
-     <div class="search">
-        <input type="text" class="searchTerm" placeholder="Discover Trecks!">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-       </button>
-     </div>
   </div>
 </div>
-
-
-
 <br>
-<div class="container">
-  <h2 class="text-center">Most popular Hikes in your area</h2>
+<div class="container" id="cards-slider">
+  <h2 class="text-center">Welcome to Trexx.<br>Here are a few adventures near you.</h2>
   <div class="cards">
     <% @nearby_treks.each do |trek| %>
       <div class="card">
@@ -56,10 +38,6 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
-
-
-
         <br>
         <h4><%= trek.name %></h4>
         <p>$<%= trek.price %></p>
@@ -67,8 +45,5 @@
       </div>
     <% end %>
   </div>
-
-  <%= link_to "Explore", treks_path, class: 'btn btn-dark' %>
-  <br>
-  <br>
-  <br>
+  <%= link_to "Explore More", treks_path, class: 'btn btn-dark' %>
+</div>
