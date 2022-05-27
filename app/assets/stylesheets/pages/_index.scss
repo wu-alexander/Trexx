@@ -12,3 +12,13 @@
 @import "components/_cards";
 @import "components/_search-form-control";
 @import "components/_banner-show";
+@import "components/_show";
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #39520D;
+}

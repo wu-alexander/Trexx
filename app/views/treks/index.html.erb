@@ -6,8 +6,8 @@
         <div class="row bg-white-semi-transparent g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary"><%= trek.start_location %></strong>
-            <h3 class="mb-0 fw-light"><%= trek.name %></h3>
-            <div class="mb-1 text-muted">$<%= trek.price %> per person</div>
+            <h3 class="mb-0 "><%= trek.name %></h3>
+            <div class="mb-1 fw-light">$<%= trek.price %> per person</div>
             <p class="card-text mb-auto"><%= trek.description.truncate(90) %></p>
 
             <%= link_to "Details", trek, class: "stretched-link" %>
