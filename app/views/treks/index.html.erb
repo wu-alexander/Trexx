@@ -8,12 +8,12 @@
             <strong class="d-inline-block mb-2 text-primary"><%= trek.start_location %></strong>
             <h3 class="mb-0"><%= trek.name %></h3>
             <div class="mb-1 text-muted">$<%= trek.price %></div>
-            <p class="card-text mb-auto"><%= trek.description %></p>
+            <p class="card-text mb-auto"><%= trek.description.truncate(90) %></p>
 
             <%= link_to "Details", trek, class: "stretched-link" %>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <img src="https://source.unsplash.com/random/200x250/?nature,<%= rand(1..99) %>" alt="">
+            <%= cl_image_tag trek.photo.key, crop: :fill, width: 200, height: 250 %>
           </div>
         </div>
       </div>
