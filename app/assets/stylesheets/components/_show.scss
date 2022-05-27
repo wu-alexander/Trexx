@@ -1,0 +1,55 @@
+.show-card {
+  max-width: 100%;
+  width: 700px;
+}
+
+.card-body {
+        font-size: 20px;
+        color: #39520D;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        padding: 4px;
+        margin: 20px;
+
+
+    }
+
+    .card-body h1{
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      color: #39520D;
+    }
+
+
+    h6{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: normal;
+        line-height: 1.8;
+    }
+
+
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: normal;
+      padding-bottom: 20px;
+  }
+
+
+  .btn {
+    flex-shrink: 0;
+    width: 7;
+    max-width: 20%;
+    margin-top: 20px;
+  }
