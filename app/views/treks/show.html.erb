@@ -1,54 +1,59 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
-      <div class="carousel-caption d-none d-md-block">
-        <h1><%= @trek.name %></h1>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
-      <div class="carousel-caption d-none d-md-block">
-        <h1><%= @trek.name %></h1>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
-      <div class="carousel-caption d-none d-md-block">
-        <h1><%= @trek.name %></h1>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+<div class="class container">
 <br>
-
-<div class= "d-flex justify-content-center">
-<div class="card" style="width: 50rem">
-  <div class="card-body">
-    <h3 class="card-title">Trek infos</h3>
-    <p><%= @trek.description %></p>
-    <h6 class="card-subtitle mb-2 text-muted">Price: <%= @trek.price %> $</h6>
-    <h6 class="card-subtitle mb-2 text-muted">Difficulty: <%= @trek.difficulty %></h6>
-    <h6 class="card-subtitle mb-2 text-muted">Start location: <%= @trek.start_location %></h6>
-    <h6 class="card-subtitle mb-2 text-muted">Number of days: <%= @trek.duration_days %></h6>
-    <div class="row d-inline">
-    <%= link_to "Book now", new_trek_booking_path(@trek), class: 'card-link' unless @trek.user == current_user %>
-    <%= link_to "Edit trek", edit_trek_path(@trek), class: 'card-link' if @trek.user == current_user %>
-    <%= link_to "Delete trek", trek_path(@trek), method: :delete, class: 'card-link', data: { confirm: "Are you sure?" } if @trek.user == current_user %>
+  <div class="class row">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
+              <div class="carousel-caption d-none d-md-block">
+                <h1><%= @trek.name %></h1>
+                <p><%= @trek.description %></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
+              <div class="carousel-caption d-none d-md-block">
+                <h1><%= @trek.name %></h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class = "banner"><img src="https://source.unsplash.com/random/featured/?mountain,<%= rand(1..99) %>" class="d-block" alt="..."></div>
+              <div class="carousel-caption d-none d-md-block">
+                <h1><%= @trek.name %></h1>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+   </div>
+  <div class="class row">
+    <div class= "d-flex justify-content-center">
+    <div class="card" style="width: 50rem">
+      <div class="card-body">
+        <h3 class="card-title">Trek infos</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Price: <%= @trek.price %> $</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Difficulty: <%= @trek.difficulty %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Start location: <%= @trek.start_location %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Number of days: <%= @trek.duration_days %></h6>
+        <div class="row d-inline">
+        <%= link_to "Book now", new_trek_booking_path(@trek), class: 'btn btn-dark' unless @trek.user == current_user %>
+        <%= link_to "Edit trek", edit_trek_path(@trek), class: 'card-link' if @trek.user == current_user %>
+        <%= link_to "Delete trek", trek_path(@trek), method: :delete, class: 'card-link', data: { confirm: "Are you sure?" } if @trek.user == current_user %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>
