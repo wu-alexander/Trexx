@@ -8,6 +8,11 @@
 
 .title {
   color: #F3EEE9;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  padding-top: 100px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .h1 {
@@ -22,17 +27,23 @@
 
 .h2.text-center {
   margin: 0;
-  color: #3C3F22;
+  color: #39520D;
   font-size: 50px;
   font-weight: bold;
   padding-bottom: 40px;
+}
+
+.text-center {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #39520D;
 }
 
 .cards {
   background-color: #F3EEE9;
   margin: 24px;
   /* border-radius: 20px; */
-
 }
 
 .cards > .card {
@@ -96,28 +107,32 @@ body{
   transform: translate(-50%, -50%);
 }
 
-
-
 a {
   color: #B3B0AB;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 a:hover {
-  color: #3C3F22;
+  color: #39520D;
 }
 
 
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 
 @media (min-width: 1200px) {
   h4, .h4 {
       font-size: 1.5rem;
+      color: #39520D;
       text-transform: uppercase;
-      font-family: sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
       letter-spacing: 2px;
   }
 }
